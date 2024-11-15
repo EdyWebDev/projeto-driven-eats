@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+
+        <title>Driven Eats</title>
+    </head>
+
+    <body>
+        <div class="header container sombra">
+            <h1>DrivenEats</h1>
+            <p>Sua comida em 6 minutos</p>
+        </div>
+
+        <div class="main container">
+           <div class="pedidos">
+                <h2>Primeiro, seu prato</h2>
+
+                <div class="section prato">
+                    <div class="box sombra" onclick="selecionarPrato(this)">
+                        <img src="img/pf_frango.jpg" alt="prato carne">
+                        <h3 class="item">Frango</h3>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <span class="preco">19.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+
+                    <div class="box sombra" onclick="selecionarPrato(this)">
+                        <img src="img/pf_calabresa.png" alt="prato calabresa">
+                        <h3 class="item">Calabresa</h3>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <span class="preco">17.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+
+                    <div class="box sombra" onclick="selecionarPrato(this)">
+                        <img src="img/pf_carne.jpg" alt="prato carne">
+                        <h3 class="item">Carne</h3>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <span class="preco">21.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+                </div>
+
+                <h2>Agora, sua bebida</h2>
+
+                <div class="section bebida">
+                    <div class="box sombra" onclick="selecionarBebida(this)">
+                        <img src="img/coca.png" alt="coca cola">
+                        <h3 class="item">Coca cola</h3>
+                        <p>lata 350ml</p>
+                        <span class="preco">7.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+
+                    <div class="box sombra" onclick="selecionarBebida(this)">
+                        <img src="img/fanta.png" alt="fanta">
+                        <h3 class="item">Fanta</h3>
+                        <p>lata 350ml</p>
+                        <span class="preco">5.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+
+                    <div class="box sombra" onclick="selecionarBebida(this)">
+                        <img src="img/suco.png" alt="suco">
+                        <h3 class="item">Suco</h3>
+                        <p>Bem frequinho</p>
+                        <span class="preco">9.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+                </div>
+
+                <h2>Por fim, sua sobremesa</h2>
+
+                <div class="section sobremesa">
+                    <div class="box sombra" onclick="selecionarSobremesa(this)">
+                        <img src="img/mouse.jpg" alt="mouse">
+                        <h3 class="item">Mouse</h3>
+                        <p>Delicioso</p>
+                        <span class="preco">7.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+
+                    <div class="box sombra" onclick="selecionarSobremesa(this)">
+                        <img src="img/brownie.jpg" alt="brownie">
+                        <h3 class="item">Brownie</h3>
+                        <p>Muito saboroso</p>
+                        <span class="preco">9.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+
+                    <div class="box sombra" onclick="selecionarSobremesa(this)">
+                        <img src="img/pudim.jpg" alt="pudim">
+                        <h3 class="item">Pudim</h3>
+                        <p>Derete na boca</p>
+                        <span class="preco">8.90</span>
+                        <i class="bi bi-check-circle escondido"></i>
+                    </div>
+                </div>
+           </div>
+        </div>
+
+        <div class="footer container">
+            <button class="enviar" onclick="finalizarPedido()">
+                Selecione os 3 itens para finalizar o pedido
+            </button>
+        </div>
+
+        <div class="pedido container escondido">
+            <div class="box-pedido">
+                <h2>Confirme seu pedido</h2>
+                <div>
+                    <p class="item-prato"></p>
+                    <p class="valor-prato"></p>
+                </div>
+               <div>
+                    <p class="item-bebida"></p>
+                    <p class="valor-bebida"></p>
+               </div>
+                <div>
+                    <p class="item-sobremesa"></p>
+                    <p class="valor-sobremesa"></p>
+                </div>
+                <div>
+                    <p class="total-pedido"> </p>
+                    <p class="valor-pedido"></p>
+                </div>
+
+                <a href="" target="_blank" onclick="enviarMensagem()" class="finalizar-pedido" disabled>Tudo certo, pode pedir!</a>
+
+                <a class="cancelar" onclick="cancelarPedido()">Cancelar</a>
+            </div>
+        </div>
+
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
